@@ -1,0 +1,57 @@
+# Build outputs
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+install_manifest.txt
+
+# Compiled artifacts
+*.o
+*.a
+*.so
+*.so.*
+*.dll
+*.dylib
+*.exe
+*.out
+sunshine_hours
+
+# CUDA / compiler intermediates
+*.ptx
+*.cubin
+*.fatbin
+*.fatbin.c
+*.module_id
+*.cudafe*
+*.gpu
+*.stub.c
+*.dlink.*
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Runtime outputs
+logs/
+log/
+test-results/
+*.log
+faillog.txt
+*.tif
+*.tiff
+!examples/data/test_dem.tif
+
+# Local editor files
+.vscode/
+.idea/
+
+# Local archives / installers
+*.tar
+*.tar.gz
+*.zip
+*.rar
+*.7z
+*.run
+*.deb

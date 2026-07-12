@@ -1,0 +1,23 @@
+name: CPU quick test
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  quick-test:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+
+      - name: Install native dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential cmake pkg-config libgdal-dev gdal-bin
+
+      - name: Run the CPU quick test
+        run: bash tests/quick_test_cpu.sh
